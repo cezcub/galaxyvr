@@ -1,0 +1,30 @@
+{
+    "format": "DESI_DENSITY_V1",
+    "grid_size": 256,
+    "dimensions": [
+        256,
+        256,
+        256
+    ],
+    "axis_order": "XYZ",
+    "box_size_mpc": 9416.97842739243,
+    "voxel_size_mpc": 36.78507198200168,
+    "grid_min_mpc": [
+        -4708.653629645116,
+        -4797.25260941091,
+        -3576.178912407403
+    ],
+    "grid_max_mpc": [
+        4708.324797747315,
+        4619.725817981521,
+        5840.799514985028
+    ],
+    "smoothing_scale_mpc": 5.0,
+    "sigma_voxels": 0.13592470343530702,
+    "mean_density_before_normalization": 0.8428335189819336,
+    "normalization": "global_grid_mean",
+    "density_type": "smoothed_galaxy_number_overdensity",
+    "galaxy_count": 14140400,
+    "data_type": "float32",
+    "endianness": "little"
+}

@@ -1,0 +1,39 @@
+{
+    "format": "DESI_STRUCTURES_V1",
+    "grid_size": 256,
+    "dimensions": [
+        256,
+        256,
+        256
+    ],
+    "axis_order": "XYZ",
+    "data_type": "uint8",
+    "classifications": {
+        "0": "Void",
+        "1": "Sheet",
+        "2": "Filament",
+        "3": "Knot"
+    },
+    "statistics": {
+        "void": {
+            "class_id": 0,
+            "voxel_count": 3602047,
+            "volume_fraction": 0.21469873189926147
+        },
+        "sheet": {
+            "class_id": 1,
+            "voxel_count": 7561127,
+            "volume_fraction": 0.450678288936615
+        },
+        "filament": {
+            "class_id": 2,
+            "voxel_count": 5536838,
+            "volume_fraction": 0.3300212621688843
+        },
+        "knot": {
+            "class_id": 3,
+            "voxel_count": 77204,
+            "volume_fraction": 0.004601716995239258
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "format": "DESI_GALAXIES",
+    "version": 1,
+    "binary_file": "galaxies.bin",
+    "source": "/Users/aarush.tiyyagura/code/DESIVR/data/processed_galaxies.parquet",
+    "total_valid_galaxies": 14140400,
+    "exported_galaxies": 150000,
+    "sampled": true,
+    "record_size_bytes": 24,
+    "header_size_bytes": 12,
+    "endianness": "little",
+    "fields": [
+        {
+            "name": "x",
+            "type": "float32",
+            "offset": 0
+        },
+        {
+            "name": "y",
+            "type": "float32",
+            "offset": 4
+        },
+        {
+            "name": "z",
+            "type": "float32",
+            "offset": 8
+        },
+        {
+            "name": "redshift",
+            "type": "float32",
+            "offset": 12
+        },
+        {
+            "name": "targetid",
+            "type": "uint64",
+            "offset": 16
+        }
+    ],
+    "coordinate_system": {
+        "source_unit": "Mpc",
+        "unity_unit": "Unity units",
+        "unity_units_per_mpc": 0.01,
+        "origin_mpc": [
+            -0.16441594890011402,
+            -88.76339571469452,
+            1132.3103012888125
+        ],
+        "origin_definition": "Center of the shared cubic spatial grid.",
+        "axis_mapping": {
+            "unity_x": "x_mpc",
+            "unity_y": "y_mpc",
+            "unity_z": "z_cart_mpc"
+        },
+        "transform": "unity_position = (catalog_position_mpc - origin_mpc) * unity_units_per_mpc",
+        "grid_min_mpc": [
+            -4708.653629645116,
+            -4797.25260941091,
+            -3576.178912407403
+        ],
+        "grid_max_mpc": [
+            4708.324797747315,
+            4619.725817981521,
+            5840.799514985028
+        ],
+        "grid_min_unity": [
+            -47.084892136962154,
+            -47.084892136962154,
+            -47.084892136962154
+        ],
+        "grid_max_unity": [
+            47.084892136962154,
+            47.084892136962154,
+            47.084892136962154
+        ],
+        "unity_box_size": 94.16978427392431
+    },
+    "redshift_statistics": {
+        "minimum": 7.575253562208673e-07,
+        "maximum": 1.6977239847183228,
+        "mean": 0.5951493978500366
+    }
+}

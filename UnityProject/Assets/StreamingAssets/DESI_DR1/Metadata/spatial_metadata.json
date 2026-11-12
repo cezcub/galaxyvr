@@ -1,0 +1,138 @@
+{
+    "format": "DESI_VR_SPATIAL_METADATA",
+    "version": 2,
+    "source": {
+        "catalog": "/Users/aarush.tiyyagura/code/DESIVR/data/processed_galaxies.parquet",
+        "catalog_format": "Parquet",
+        "valid_galaxies": 14140400,
+        "rejected_rows": 0
+    },
+    "selection": {
+        "minimum_redshift": 0.0,
+        "maximum_redshift": 2.0,
+        "redshift_column": "Z",
+        "coordinate_columns": [
+            "x_mpc",
+            "y_mpc",
+            "z_cart_mpc"
+        ],
+        "redshift_interpretation": "Observed catalog redshift."
+    },
+    "spatial_bounds": {
+        "catalog_min_mpc": [
+            -4708.653629645116,
+            -4681.908654730114,
+            -2420.4337293310477
+        ],
+        "catalog_max_mpc": [
+            4708.324797747316,
+            4504.381863300725,
+            4685.054331908673
+        ],
+        "grid_min_mpc": [
+            -4708.653629645116,
+            -4797.25260941091,
+            -3576.178912407403
+        ],
+        "grid_max_mpc": [
+            4708.324797747315,
+            4619.725817981521,
+            5840.799514985028
+        ],
+        "center_mpc": [
+            -0.16441594890011402,
+            -88.76339571469452,
+            1132.3103012888125
+        ],
+        "box_size_mpc": 9416.97842739243
+    },
+    "grid": {
+        "dimensions": [
+            256,
+            256,
+            256
+        ],
+        "resolution": 256,
+        "voxel_size_mpc": 36.78507198200168,
+        "smoothing_scale_mpc": 5.0,
+        "axis_order": [
+            "x",
+            "y",
+            "z"
+        ],
+        "flattening_order": "C"
+    },
+    "coordinates": {
+        "source_unit": "Mpc",
+        "unity_unit": "Unity units",
+        "unity_units_per_mpc": 0.01,
+        "origin_mpc": [
+            -0.16441594890011402,
+            -88.76339571469452,
+            1132.3103012888125
+        ],
+        "origin_definition": "Center of the shared cubic spatial grid.",
+        "axis_mapping": {
+            "unity_x": "x_mpc",
+            "unity_y": "y_mpc",
+            "unity_z": "z_cart_mpc"
+        },
+        "transform": "unity_position = (catalog_position_mpc - origin_mpc) * unity_units_per_mpc",
+        "grid_min_mpc": [
+            -4708.653629645116,
+            -4797.25260941091,
+            -3576.178912407403
+        ],
+        "grid_max_mpc": [
+            4708.324797747315,
+            4619.725817981521,
+            5840.799514985028
+        ],
+        "grid_min_unity": [
+            -47.084892136962154,
+            -47.084892136962154,
+            -47.084892136962154
+        ],
+        "grid_max_unity": [
+            47.084892136962154,
+            47.084892136962154,
+            47.084892136962154
+        ],
+        "unity_box_size": 94.16978427392431
+    },
+    "cosmology": {
+        "H0": 70.0,
+        "omega_m": 0.3,
+        "distance_type": "Comoving distance"
+    },
+    "binary_conventions": {
+        "endianness": "little",
+        "floating_point": "float32",
+        "integer_types": {
+            "uint8": "8-bit unsigned integer",
+            "uint32": "32-bit unsigned integer",
+            "uint64": "64-bit unsigned integer"
+        },
+        "density_storage": "float32",
+        "structure_storage": "uint8",
+        "tweb_storage": "float32"
+    },
+    "export_products": {
+        "galaxies": {
+            "file": "galaxies.bin",
+            "description": "Sampled DESI galaxy positions and redshifts."
+        },
+        "density": {
+            "file": "density.bin",
+            "description": "Smoothed normalized galaxy density field."
+        },
+        "tweb": {
+            "file": "tweb.bin",
+            "description": "Tidal tensor eigenvalues and web classification."
+        },
+        "structures": {
+            "file": "structures.bin",
+            "description": "Discrete cosmic web structure classification."
+        }
+    }
+}

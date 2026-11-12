@@ -1,0 +1,62 @@
+paths:
+  input_catalog: "data/processed_galaxies.parquet"
+  output_directory: "output"
+
+cosmology:
+  H0: 70.0
+  omega_m: 0.3
+  
+selection:
+  min_redshift: 0.0
+  max_redshift: 2.0
+
+  require_finite_coordinates: true
+  require_positive_redshift: true
+
+density:
+  grid_size: 256
+  smoothing_scale_mpc: 5.0
+  minimum_count: 0
+  normalization: "occupied_mean"
+
+structures:
+  low_density_percentile: 25
+  high_density_percentile: 90
+
+tweb:
+  eigenvalue_threshold: 0.2
+  slice_depth: 16
+  save_eigenvalues: true
+
+vr:
+  scale_units_per_mpc: 0.001
+  galaxy_point_size: 0.01
+  density_colormap: "viridis"
+  export_density_volume: true
+  export_galaxy_positions: true
+  export_structure_map: true
+
+visualization:
+  max_galaxies: 150000
+  random_seed: 42
+  unity_units_per_mpc: 0.01
+
+cosmic_web_preview:
+  grid_size: 96
+  smoothing_scale_mpc: 3.0
+
+  max_galaxies: 30000
+  random_seed: 42
+
+  density_percentile_min: 85
+  density_percentile_max: 99.5
+
+  galaxy_point_size: 1.5
+  galaxy_opacity: 0.45
+
+  density_opacity: 0.18
+  density_surface_count: 3
+
+  background: "#050711"
+
+  output_file: "data/cosmic_web/cosmic_web_3d.html"
