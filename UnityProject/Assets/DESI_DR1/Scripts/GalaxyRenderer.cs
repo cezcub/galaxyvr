@@ -139,12 +139,12 @@ public class DESIGalaxyRenderer : MonoBehaviour
                     unityUnitsPerMpc;
 
                 Vector3 worldPosition =
-                    transform.TransformPoint(localPosition);
+                    transform.TransformPoint(unityPosition);
                 
                 positions[i] = new Vector4(
-                    unityPosition.x,
-                    unityPosition.y,
-                    unityPosition.z,
+                    worldPosition.x,
+                    worldPosition.y,
+                    worldPosition.z,
                     1f
                 );
 
@@ -247,13 +247,6 @@ public class DESIGalaxyRenderer : MonoBehaviour
             galaxyBuffer.Release();
             galaxyBuffer = null;
         }
-    }
-
-    private bool visible = true;
-
-    public void SetVisible(bool value)
-    {
-        visible = value;
     }
 
 }

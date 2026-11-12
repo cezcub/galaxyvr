@@ -101,12 +101,32 @@ public class DESIDataLoader : MonoBehaviour
             false
         );
 
+        // Convert raw little-endian bytes to floats.
+        float[] densityValues = new float[voxelCount];
+
+        Buffer.BlockCopy(
+            densityBytes,
+            0,
+            densityValues,
+            0,
+            densityBytes.Length
+        );
+
+        // Create density texture.
+        DensityTexture = new Texture3D(
+            resolution,
+            resolution,
+            resolution,
+            TextureFormat.RFloat,
+            false
+        );
+
         DensityTexture.name = "DESI_Density_Volume";
         DensityTexture.filterMode = densityFilter;
         DensityTexture.wrapMode = TextureWrapMode.Clamp;
 
         DensityTexture.SetPixelData<float>(
-            densityBytes, 0
+            densityValues, 0
         );
 
         DensityTexture.Apply(false, true);
